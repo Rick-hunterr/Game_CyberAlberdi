@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/btn-derecha.png" type="Texture" id=1]
+[ext_resource path="res://assets/btn-arriba.png" type="Texture" id=2]
+[ext_resource path="res://assets/btn-izquierda.png" type="Texture" id=3]
+[ext_resource path="res://assets/btn-abajo.png" type="Texture" id=4]
+
+[node name="Controles" type="CanvasLayer"]
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2( 5, 507 )
+normal = ExtResource( 3 )
+action = "tecla_A"
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2( 163, 506 )
+normal = ExtResource( 1 )
+action = "tecla_D"
+
+[node name="up" type="TouchScreenButton" parent="."]
+position = Vector2( 84, 435 )
+normal = ExtResource( 2 )
+action = "tecla_W"
+
+[node name="down" type="TouchScreenButton" parent="."]
+position = Vector2( 84, 508 )
+normal = ExtResource( 4 )
+action = "tecla_S"

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hino-da-Argentina-em-8-Bits-Himno-Argentino-en-8-bits-Argentina-National-Anthem-8-bit-Version_[cut_31sec].mp3-583304003e40a40b27a6d836469b75f9.mp3str"
+
+[deps]
+
+source_file="res://assets/Sonidos/Hino-da-Argentina-em-8-Bits-Himno-Argentino-en-8-bits-Argentina-National-Anthem-8-bit-Version_[cut_31sec].mp3"
+dest_files=[ "res://.import/Hino-da-Argentina-em-8-Bits-Himno-Argentino-en-8-bits-Argentina-National-Anthem-8-bit-Version_[cut_31sec].mp3-583304003e40a40b27a6d836469b75f9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

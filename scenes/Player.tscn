@@ -1,0 +1,533 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/pablo.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=6]
+script/source = "extends KinematicBody2D
+
+var vel_actual = Vector2()
+var vel_desp = 6
+
+var main
+func _ready():
+	main = get_tree().get_nodes_in_group(\"main\")[0]
+	$DetectarTilsets/RayCast2D.add_exception(self)
+func _physics_process(_delta):
+	mover()
+	vel_actual = Vector2()
+	if(!main.TextoOn):
+		if Input.is_action_just_pressed(\"tecla_X\"):
+			interactuar_tile()
+			ProcesarRaycast()
+		elif Input.is_action_pressed(\"tecla_W\"):
+			$DetectarTilsets.rotation_degrees = 0
+			vel_actual.y = -vel_desp
+			$AnimationPlayer.play(\"move-Up\")
+		elif Input.is_action_pressed(\"tecla_S\"):
+			$DetectarTilsets.rotation_degrees = 180
+			vel_actual.y = vel_desp
+			$AnimationPlayer.play(\"move-Down\")
+		elif Input.is_action_pressed(\"tecla_A\"):
+			$DetectarTilsets.rotation_degrees = 270
+			vel_actual.x = -vel_desp
+			$AnimationPlayer.play(\"move-Derecha\")
+			$Sprite.flip_h = true
+		elif Input.is_action_pressed(\"tecla_D\"):
+			$DetectarTilsets.rotation_degrees = 90
+			vel_actual.x = vel_desp
+			$AnimationPlayer.play(\"move-Derecha\")
+			$Sprite.flip_h = false
+		elif Input.is_action_pressed(\"Saltar\"):
+			main.CambiarEscena(-1)
+		else:
+		# Detener la animación si no hay teclas presionadas
+			if $AnimationPlayer.is_playing():
+				$AnimationPlayer.stop()
+		
+	
+	elif(main.TextoOn):
+		if Input.is_action_just_pressed(\"tecla_X\"):
+			Logica.ProcesarTexto()
+			
+	# Mover el objeto
+	move_and_collide(vel_actual)
+
+	# Obtener el número de tile
+	if $AnimationPlayer.is_playing():
+		var tiles = get_tree().get_nodes_in_group(\"tiles\")
+		if tiles.size() > 0:
+			var tile_map = tiles[0]
+			var tile_position = tile_map.world_to_map($DetectarTilsets/Position2D.global_position)
+			var NumeroDeTile = tile_map.get_cellv(tile_position)
+			
+			match NumeroDeTile:
+				42:
+					main.CambiarEscena(1)
+					
+					pass
+				46:
+					main.CambiarEscena(2)
+					pass
+				225:
+					main.CambiarEscena(3)
+					
+					pass
+				222:
+					main.CambiarEscena(4)
+					
+					pass
+				221:
+					if(Logica.robot == true):
+						main.CambiarEscena(6)
+					else:
+						Logica.ReproducirTexto(25)
+					
+					pass
+				137:
+					main.CambiarEscena(5)
+				415:
+					main.CambiarEscena(15)
+					
+				410:
+					main.CambiarEscena(18)
+				315:
+					main.CambiarEscena(20)
+				428:
+					if(Logica.txtJhonny == true):
+						Logica.ReproducirTexto(10)
+						Logica.txtJhonny = false
+				432:
+					Logica.MoverJhonny = true
+				427:
+					if(Logica.Mostrartxt2 == true):
+						Logica.ReproducirTexto(14)
+				374:
+					if(Logica.Npc8Derrotado == true):
+						main.CambiarEscena(21)
+				422:
+					main.CambiarEscena(22)
+				365:
+					Logica.ReproducirTexto(16)
+				353:
+					main.CambiarEscena(26)
+				352:
+					main.CambiarEscena(27)
+				354:
+					main.CambiarEscena(28)
+				348:
+					main.CambiarEscena(29)
+				349:
+					main.CambiarEscena(30)
+				350:
+					main.CambiarEscena(31)
+				366:
+					main.CambiarEscena(33)
+				363:
+					main.CambiarEscena(35)
+				364:
+					main.CambiarEscena(36)
+				187:
+					main.CambiarEscena(37)
+				141:
+					Logica.Oscuridad()
+				25:
+					Logica.NoOscuridad()
+				1:
+					if(Logica.MostrarCorrerEva == false):
+						Logica.MostrarCorrerEva = true
+				440:
+					if(Logica.CharlaEva == true):
+						Logica.ReproducirTexto(27)
+						Logica.CharlaEva = false
+				346:
+					if(Logica.Laberinto2 == true):
+						main.CambiarEscena(41)
+						Logica.Laberinto2 = false
+				341:
+					if(Logica.CharlaEva2 == true):
+						Logica.ReproducirTexto(28)
+						Logica.CharlaEva2 = false
+				347:
+					if(Logica.CharlaEva3 == true):
+						Logica.ReproducirTexto(29)
+						Logica.CharlaEva3 = false
+				394:
+					Logica.MoverEva = true
+						
+				400:
+					if(Logica.Npc16Derrotado == true):
+						main.CambiarEscena(43)
+					else:
+						Logica.ReproducirTexto(32)
+				#empezar combate al pisar tile
+				335:
+					Logica.empezarCombate = true
+				
+				336:
+					if(Logica.MostrarComentario == true):
+						Logica.ReproducirTexto(7)
+				408:
+					if(Logica.puzleCompletado == false):
+						Logica.ReproducirTexto(8)
+					else:
+						main.CambiarEscena(14)
+				
+				406:
+					if(Logica.CharlaLumina == true):
+						Logica.ReproducirTexto(31)
+						Logica.CharlaLumina = false
+				
+				407:
+					main.CambiarEscena(45)
+					
+			if NumeroDeTile != -1:
+				vel_actual = Vector2(0,0)
+				if NumeroDeTile != 10:
+					vel_actual = Vector2(0, 0)
+					#print(NumeroDeTile)
+					move_and_collide(vel_actual)
+					
+func interactuar_tile():
+	var tiles = get_tree().get_nodes_in_group(\"tiles\")
+	var tile_map = tiles[0]
+	var tile_position = tile_map.world_to_map($DetectarTilsets/Position2D.global_position)
+	var NumeroDeTile = tile_map.get_cellv(tile_position)
+	print(NumeroDeTile)
+	match NumeroDeTile:
+		#mostrar dialogo interactuando con tiles
+				2:
+					if(Logica.MostrarDialogoRoberto == true):
+						Logica.robot = true
+						Logica.Moviendo = true
+						Logica.ReproducirTexto(-1)
+				13:
+					Logica.ReproducirTexto(1)
+				303:
+					Logica.ReproducirTexto(2)
+				338:
+					Logica.ReproducirTexto(6)
+					#Puzzle nivel 1 Phishing
+				411:
+					Logica.cantidadLetras += 1
+					Logica.Clave += \"P\"
+					Logica.ReproducirTexto(9)
+				412:
+					Logica.cantidadLetras += 1
+					Logica.Clave += \"H\"
+					Logica.ReproducirTexto(9)
+				413:
+					Logica.cantidadLetras += 1
+					Logica.Clave += \"I\"
+					Logica.ReproducirTexto(9)
+				417:
+					Logica.cantidadLetras += 1
+					Logica.Clave += \"N\"
+					Logica.ReproducirTexto(9)
+				418:
+					Logica.cantidadLetras += 1
+					Logica.Clave += \"G\"
+					Logica.ReproducirTexto(9)
+				414:
+					Logica.cantidadLetras += 1
+					Logica.Clave += \"S\"
+					Logica.ReproducirTexto(9)
+					
+				#Recolectar objetos:
+				339:
+					Logica.ReproducirTexto(5)
+				424:
+					Logica.ReproducirTexto(11)
+				421:
+					Logica.ReproducirTexto(15)
+					#Mejoras Piratas
+				384:
+					Logica.ReproducirTexto(17)
+				385:
+					Logica.ReproducirTexto(18)
+				386:
+					Logica.ReproducirTexto(19)
+				387:
+					Logica.ReproducirTexto(20)
+				388:
+					Logica.ReproducirTexto(21)
+				395:
+					Logica.ReproducirTexto(22)
+					
+					
+					#Cambiarecenas interactuando con tiles
+				334:
+					main.CambiarEscena(7)
+					#verifica si tiene que mostrar el texto del tutorial
+					if(Logica.NpcDerrotado == false):
+						Logica.ReproducirTexto(3)
+						pass
+				333:
+						main.CambiarEscena(6)
+				16:
+					main.CambiarEscena(12)
+				389:
+					main.CambiarEscena(13)
+				4:
+					main.CambiarEscena(38)
+				5:
+					main.CambiarEscena(39)
+				442:
+					Logica.ReproducirTexto(26)
+						
+				399:
+					main.CambiarEscena(44)
+					
+func ProcesarRaycast():
+	var objColisionado = $DetectarTilsets/RayCast2D.get_collider()
+	if (objColisionado != null && objColisionado.is_in_group(\"npc\")):
+		Logica.Moviendo = true
+	if (objColisionado != null && objColisionado.is_in_group(\"npc\")):
+		
+		match(int ($DetectarTilsets.rotation_degrees)):
+			0:
+				objColisionado.interaccion(0)
+			90:
+				objColisionado.interaccion(1)
+			180:
+				objColisionado.interaccion(2)
+			270:
+				pass
+				objColisionado.interaccion(3)
+				
+func mover():
+	#Aca se selecciona con que enemigo se va a tener el combate
+	
+	var objColisionado = $DetectarTilsets/RayCast2D.get_collider()
+	if objColisionado != null:
+		if objColisionado.name == \"RobotTutorial\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(100)
+		elif objColisionado.name == \"RobotTutorial2\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(101)
+		elif objColisionado.name == \"RobotTutorial3\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(102)
+		elif objColisionado.name == \"RobotTutorial4\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(103)
+		elif objColisionado.name == \"Robot1Fabrica\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(104)
+		elif objColisionado.name == \"Robot1Fabrica2\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(105)
+		elif objColisionado.name == \"Robot1Fabrica3\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(106)
+		elif objColisionado.name == \"Jhonny\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(107)
+		elif objColisionado.name == \"RobotLaboratorio\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(108)
+		elif objColisionado.name == \"RobotLaboratorio2\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(109)
+		elif objColisionado.name == \"RobotLaboratorio3\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(110)
+		elif objColisionado.name == \"RobotTrampa\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(111)
+		elif objColisionado.name == \"RatonPerez\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(112)
+		elif objColisionado.name == \"RobotEva\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(113)
+		elif objColisionado.name == \"RobotEva2\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(114)
+		elif objColisionado.name == \"Eva\":
+			print(objColisionado)
+			Logica.NivelCompletado = false
+			main.CambiarEscena(115)
+		
+	if (objColisionado != null):
+		
+		Logica.Moviendo = false
+	else:
+		Logica.Moviendo = true
+"
+
+[sub_resource type="CircleShape2D" id=7]
+custom_solver_bias = 1.0
+radius = 15.0
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame_coords")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "move-Derecha"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 18, 19, 20, 21, 22, 23 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "move-Down"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 1, 2, 4, 4, 5, 3 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "move-Up"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 12, 13, 14, 15, 16, 17, 15 ]
+}
+
+[node name="Player" type="KinematicBody2D" groups=["Jugador"]]
+z_index = 1
+script = SubResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 14 )
+rotation = -3.14159
+shape = SubResource( 7 )
+one_way_collision_margin = 0.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 3.8147e-06, 1.90735e-06 )
+texture = ExtResource( 1 )
+hframes = 7
+vframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/move-Derecha = SubResource( 3 )
+anims/move-Down = SubResource( 5 )
+anims/move-Up = SubResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.8, 0.8 )
+smoothing_speed = 1.0
+
+[node name="DetectarTilsets" type="Node2D" parent="."]
+position = Vector2( 0, 14 )
+
+[node name="Position2D" type="Position2D" parent="DetectarTilsets"]
+__meta__ = {
+"_gizmo_extents_": 1.0
+}
+
+[node name="RayCast2D" type="RayCast2D" parent="DetectarTilsets"]
+scale = Vector2( 24, 24 )
+enabled = true
+cast_to = Vector2( 0, -2 )
+
+[node name="RayCast2D2" type="RayCast2D" parent="DetectarTilsets"]
+rotation = 3.14159
+scale = Vector2( 24, 24 )
+enabled = true
+cast_to = Vector2( 0, -2 )
+
+[node name="RayCast2D3" type="RayCast2D" parent="DetectarTilsets"]
+rotation = 1.5708
+scale = Vector2( 24, 24 )
+enabled = true
+cast_to = Vector2( 0, -2 )
+
+[node name="RayCast2D4" type="RayCast2D" parent="DetectarTilsets"]
+rotation = 4.71239
+scale = Vector2( 24, 24 )
+enabled = true
+cast_to = Vector2( 0, -2 )
+
+[node name="RayCast2D5" type="RayCast2D" parent="DetectarTilsets"]
+rotation = -0.785398
+scale = Vector2( 24, 24 )
+enabled = true
+cast_to = Vector2( 0, -2 )
+
+[node name="RayCast2D6" type="RayCast2D" parent="DetectarTilsets"]
+rotation = 2.35619
+scale = Vector2( 24, 24 )
+enabled = true
+cast_to = Vector2( 0, -2 )
+
+[node name="RayCast2D7" type="RayCast2D" parent="DetectarTilsets"]
+rotation = 3.92699
+scale = Vector2( 24, 24 )
+enabled = true
+cast_to = Vector2( 0, -2 )
+
+[node name="RayCast2D8" type="RayCast2D" parent="DetectarTilsets"]
+rotation = 0.785398
+scale = Vector2( 24, 24 )
+enabled = true
+cast_to = Vector2( 0, -2 )

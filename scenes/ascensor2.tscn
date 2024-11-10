@@ -1,0 +1,189 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://spawn.gd" type="Script" id=1]
+[ext_resource path="res://assets/Fuente/PressStart2P-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://SpritesMapa1.tres" type="TileSet" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 6
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Ascensor
+" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:custom_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Callejon" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:custom_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+
+[node name="ascensor2" type="Node2D" groups=["nivel"]]
+
+[node name="Piso" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -131075, 137, 0, -131074, 137, 0, -131073, 137, 0, -196608, 137, 0, -196607, 137, 0, -196606, 137, 0, -65539, 137, 0, -65538, 137, 0, -65537, 137, 0, -131072, 137, 0, -131071, 137, 0, -131070, 137, 0, -3, 137, 0, -2, 137, 0, -1, 137, 0, -65536, 137, 0, -65535, 137, 0, -65534, 137, 0, 65533, 137, 0, 65534, 137, 0, 65535, 137, 0, 0, 137, 0, 1, 137, 0, 2, 137, 0, 131069, 137, 0, 131070, 137, 0, 131071, 137, 0, 65536, 137, 0, 65537, 137, 0, 65538, 137, 0, 196605, 137, 0, 196606, 137, 0, 196607, 137, 0, 131072, 137, 0, 131073, 137, 0, 131074, 137, 0 )
+
+[node name="Piso2" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -131075, 137, 0, -131074, 137, 0, -131073, 137, 0, -196608, 137, 0, -196607, 137, 0, -196606, 137, 0, -65539, 137, 0, -65538, 137, 0, -65537, 137, 0, -131072, 137, 0, -131071, 137, 0, -131070, 137, 0, -2, 137, 0, -1, 137, 0, -65536, 137, 0, -65535, 137, 0, -65534, 536871100, 0, 65534, 137, 0, 65535, 137, 0, 0, 137, 0, 1, 137, 0, 2, 536871100, 0, 131069, 137, 0, 131070, 137, 0, 131071, 137, 0, 65536, 137, 0, 65537, 137, 0, 65538, 137, 0, 196605, 137, 0, 196606, 137, 0, 196607, 137, 0, 131072, 137, 0, 131073, 137, 0, 131074, 137, 0 )
+
+[node name="Piso3" type="TileMap" parent="."]
+z_index = 1
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -851974, 335, 0, -917503, 335, 0, -589830, 334, 0 )
+
+[node name="pared" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -393220, -1073741549, 0, -393219, 276, 0, -393218, 276, 0, -393217, 276, 0, -458752, 276, 0, -458751, 276, 0, -458750, 276, 0, -458749, -536870637, 0, -327684, -1073741549, 0, -327683, 276, 0, -327682, 276, 0, -327681, 276, 0, -393216, 276, 0, -393215, 276, 0, -393214, 276, 0, -393213, -536870637, 0, -262148, -1073741549, 0, -262147, 276, 0, -262146, 276, 0, -262145, 276, 0, -327680, 276, 0, -327679, 276, 0, -327678, 276, 0, -327677, -536870637, 0, -196612, 276, 0, -196611, 276, 0, -196610, 276, 0, -196609, 276, 0, -262144, 276, 0, -262143, 276, 0, -262142, 276, 0, -262141, -536870637, 0, -131076, -1073741549, 0, -196605, -1610612461, 0, -65540, -1073741549, 0, -131069, -1610612461, 0, -4, -1073741549, 0, -65533, -1610612461, 0, 65532, -1073741549, 0, 3, -1610612461, 0, 131068, -1073741549, 0, 65539, -1610612461, 0, 196604, -1073741549, 0, 131075, -1610612461, 0, 262140, 1073742099, 0, 262141, 1073742099, 0, 262142, 1073742099, 0, 262143, 1073742099, 0, 196608, 1073742099, 0, 196609, 1073742099, 0, 196610, 1073742099, 0, 196611, 1073742099, 0 )
+
+[node name="pared2" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -589830, 1073741826, 0 )
+
+[node name="Elementos" type="TileMap" parent="."]
+scale = Vector2( 1.5, 1.5 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -262145, 333, 0 )
+
+[node name="Colisiones" type="TileMap" parent="."]
+position = Vector2( 288, 736 )
+rotation = 1.5708
+scale = Vector2( 16, 16 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 2, 2 )
+cell_quadrant_size = 2
+cell_custom_transform = Transform2D( 4, 0, 0, 4, 0, 0 )
+show_collision = true
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( 393189, 297, 0, 393190, 297, 0, 393191, 297, 0, 393192, 297, 0, 393193, 297, 0, 393194, 297, 0, 393195, 297, 0, 393196, 297, 0, 458725, 297, 0, 458732, 297, 0, 524261, 297, 0, 524268, 297, 0, 589797, 297, 0, 589804, 297, 0, 655333, 297, 0, 655340, 297, 0, 720869, 297, 0, 720876, 297, 0, 786405, 297, 0, 786412, 297, 0, 851941, 297, 0, 851942, 297, 0, 851943, 297, 0, 851944, 297, 0, 851945, 297, 0, 851946, 297, 0, 851947, 297, 0, 851948, 297, 0 )
+
+[node name="Colisiones2" type="TileMap" parent="."]
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 2, 2 )
+cell_tile_origin = 1
+show_collision = true
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( -458764, 297, 0, -393241, 297, 0, -393240, 297, 0, -393239, 297, 0, -393238, 297, 0, -393237, 297, 0, -393236, 297, 0, -393235, 297, 0, -393234, 297, 0, -393233, 297, 0, -393232, 297, 0, -393231, 297, 0, -393230, 297, 0, -393229, 297, 0, -393228, 297, 0, -327693, 297, 0, -327692, 297, 0, -262157, 297, 0, -262156, 297, 0, -196621, 297, 0, -196620, 297, 0, -131085, 297, 0, -131084, 297, 0, -65549, 297, 0, -65548, 297, 0, -13, 297, 0, -12, 297, 0, 65523, 297, 0, 65524, 297, 0, 131059, 297, 0, 131060, 297, 0, 196595, 297, 0, 196596, 297, 0, 262119, 297, 0, 262120, 297, 0, 262121, 297, 0, 262122, 297, 0, 262123, 297, 0, 262124, 297, 0, 262125, 297, 0, 262126, 297, 0, 262127, 297, 0, 262128, 297, 0, 262129, 297, 0, 262130, 297, 0, 262131, 297, 0, 262132, 297, 0, 327668, 297, 0 )
+
+[node name="spawn" type="Position2D" parent="."]
+position = Vector2( -32, 0 )
+scale = Vector2( 2, 2 )
+z_index = -1
+script = ExtResource( 1 )
+
+[node name="objetos" type="TileMap" parent="." groups=["tiles"]]
+z_index = -1
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 32
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+cell_tile_origin = 1
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( -65537, 4, 0, -131072, 4, 0, -1, 4, 0, -65536, 4, 0, -65534, 536871099, 0, 2, 536871099, 0, 47251042, 536871134, 0, 47251043, 536871134, 0, 47251044, 536871134, 0, 47251045, 536871134, 0, 47251046, 536871134, 0, 47316583, 536871134, 0, 47316584, 536871134, 0, 47316585, 536871134, 0, 47316586, 536871134, 0, 47316587, 536871134, 0, 47316588, 536871134, 0, 47382125, 536871134, 0, 47382126, 536871134, 0, 47382127, 536871134, 0, 47382128, 536871134, 0, 47382129, 536871134, 0, 47382130, 536871134, 0, 47382131, 536871134, 0, 47382132, 536871134, 0, 47382133, 536871134, 0, 47382134, 536871134, 0, 47382135, 536871134, 0, 47382136, 536871134, 0, 47382137, 536871134, 0, 47382138, 536871134, 0, 47382139, 536871134, 0, 47382140, 536871134, 0, 47382141, 536871134, 0, 47382142, 536871134, 0, 47382143, 536871134, 0, 47382144, 536871134, 0, 47382145, 536871134, 0, 47382146, 536871134, 0, 47382147, 536871134, 0, 47382148, 536871134, 0, 47382149, 536871134, 0, 47382150, 536871134, 0, 47382151, 536871134, 0, 47382152, 536871134, 0, 47447689, 536871134, 0, 47447690, 536871134, 0, 47513227, 536871134, 0, 47513228, 536871134, 0, 47513229, 536871134, 0, 47513230, 536871134, 0, 47513231, 536871134, 0, 47513232, 536871134, 0, 47513233, 536871134, 0, 47513234, 536871134, 0, 47513235, 536871134, 0, 47513236, 536871134, 0, 47513237, 536871134, 0, 47513238, 536871134, 0, 47513239, 536871134, 0, 47513240, 536871134, 0, 47513241, 536871134, 0, 47513242, 536871134, 0, 47513243, 536871134, 0, 47513244, 536871134, 0, 47513245, 536871134, 0, 47513246, 536871134, 0, 47513247, 536871134, 0, 47513248, 536871134, 0, 47513249, 536871134, 0, 47513250, 536871134, 0, 47513251, 536871134, 0, 47513252, 536871134, 0, 47513253, 536871134, 0, 47513254, 536871134, 0, 47513276, 536871134, 0, 47513277, 536871134, 0, 47513278, 536871134, 0, 47513279, 536871134, 0, 47578791, 536871134, 0, 47578792, 536871134, 0, 47578795, 536871134, 0, 47578796, 536871134, 0, 47578797, 536871134, 0, 47578798, 536871134, 0, 47578799, 536871134, 0, 47578800, 536871134, 0, 47578809, 536871134, 0, 47578810, 536871134, 0, 47578811, 536871134, 0, 47578812, 536871134, 0, 47578813, 536871134, 0, 47644337, 536871134, 0, 47644338, 536871134, 0, 47644339, 536871134, 0, 47644340, 536871134, 0, 47644341, 536871134, 0, 47644342, 536871134, 0, 47644343, 536871134, 0, 47644344, 536871134, 0, 47644345, 536871134, 0 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = -114.0
+margin_top = -48.0
+margin_right = -58.0
+margin_bottom = -31.0
+rect_scale = Vector2( 4.17937, 2.8657 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Callejon"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="NombreMapa" type="AnimationPlayer" parent="."]
+autoplay = "NombreNivel"
+anims/NombreNivel = SubResource( 2 )
+anims/RESET = SubResource( 3 )

@@ -1,0 +1,1490 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scenes/DañoAtaqueCaja1.gd" type="Script" id=1]
+[ext_resource path="res://SpritesMapa1.tres" type="TileSet" id=2]
+[ext_resource path="res://scenes/AtaquesJhonny.gd" type="Script" id=3]
+[ext_resource path="res://assets/cuchillo.png" type="Texture" id=4]
+[ext_resource path="res://assets/start2.png" type="Texture" id=5]
+[ext_resource path="res://assets/start.png" type="Texture" id=6]
+[ext_resource path="res://assets/garfio.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1.77778, 0.444445 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 3.55556, 0.444445 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 3.55556, 0.444444 )
+
+[node name="AtaquesJhonny" type="Node2D"]
+position = Vector2( 8, -48 )
+script = ExtResource( 3 )
+
+[node name="cuchillo1" type="RigidBody2D" parent="."]
+position = Vector2( -106, 202 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo1" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo1/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo1/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo1/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D2" type="Node2D" parent="cuchillo1" groups=["enemigo"]]
+position = Vector2( 0, 16 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo1/Node2D2"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo1/Node2D2"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo1/Node2D2/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D3" type="Node2D" parent="cuchillo1" groups=["enemigo"]]
+position = Vector2( 0, -16 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo1/Node2D3"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo1/Node2D3"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo1/Node2D3/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D4" type="Node2D" parent="cuchillo1" groups=["enemigo"]]
+position = Vector2( 0, -32 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo1/Node2D4"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo1/Node2D4"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo1/Node2D4/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D5" type="Node2D" parent="cuchillo1" groups=["enemigo"]]
+position = Vector2( 0, 32 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo1/Node2D5"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo1/Node2D5"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo1/Node2D5/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D6" type="Node2D" parent="cuchillo1" groups=["enemigo"]]
+position = Vector2( 0, 48 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo1/Node2D6"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo1/Node2D6"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo1/Node2D6/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D7" type="Node2D" parent="cuchillo1" groups=["enemigo"]]
+position = Vector2( 0, 64 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo1/Node2D7"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo1/Node2D7"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo1/Node2D7/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D8" type="Node2D" parent="cuchillo1" groups=["enemigo"]]
+position = Vector2( 0, -48 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo1/Node2D8"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo1/Node2D8"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo1/Node2D8/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D9" type="Node2D" parent="cuchillo1" groups=["enemigo"]]
+position = Vector2( 0, -64 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo1/Node2D9"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo1/Node2D9"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo1/Node2D9/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D10" type="Node2D" parent="cuchillo1" groups=["enemigo"]]
+position = Vector2( 0, 80 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo1/Node2D10"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo1/Node2D10"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo1/Node2D10/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D11" type="Node2D" parent="cuchillo1" groups=["enemigo"]]
+position = Vector2( 0, 96 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo1/Node2D11"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo1/Node2D11"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo1/Node2D11/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D12" type="Node2D" parent="cuchillo1" groups=["enemigo"]]
+position = Vector2( 0, -80 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo1/Node2D12"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo1/Node2D12"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo1/Node2D12/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo2" type="RigidBody2D" parent="."]
+position = Vector2( 792, 217 )
+rotation = 3.14159
+
+[node name="Node2D" type="Node2D" parent="cuchillo2" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo2/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo2/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo2/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D2" type="Node2D" parent="cuchillo2" groups=["enemigo"]]
+position = Vector2( 0, 16 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo2/Node2D2"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo2/Node2D2"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo2/Node2D2/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D3" type="Node2D" parent="cuchillo2" groups=["enemigo"]]
+position = Vector2( 0, -16 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo2/Node2D3"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo2/Node2D3"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo2/Node2D3/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D4" type="Node2D" parent="cuchillo2" groups=["enemigo"]]
+position = Vector2( 0, -32 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo2/Node2D4"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo2/Node2D4"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo2/Node2D4/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D5" type="Node2D" parent="cuchillo2" groups=["enemigo"]]
+position = Vector2( 0, 32 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo2/Node2D5"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo2/Node2D5"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo2/Node2D5/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D6" type="Node2D" parent="cuchillo2" groups=["enemigo"]]
+position = Vector2( 0, 48 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo2/Node2D6"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo2/Node2D6"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo2/Node2D6/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D7" type="Node2D" parent="cuchillo2" groups=["enemigo"]]
+position = Vector2( 0, 64 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo2/Node2D7"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo2/Node2D7"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo2/Node2D7/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D8" type="Node2D" parent="cuchillo2" groups=["enemigo"]]
+position = Vector2( 0, -48 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo2/Node2D8"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo2/Node2D8"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo2/Node2D8/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D9" type="Node2D" parent="cuchillo2" groups=["enemigo"]]
+position = Vector2( 0, -64 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo2/Node2D9"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo2/Node2D9"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo2/Node2D9/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D10" type="Node2D" parent="cuchillo2" groups=["enemigo"]]
+position = Vector2( 0, 80 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo2/Node2D10"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo2/Node2D10"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo2/Node2D10/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D11" type="Node2D" parent="cuchillo2" groups=["enemigo"]]
+position = Vector2( 0, 96 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo2/Node2D11"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo2/Node2D11"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo2/Node2D11/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D12" type="Node2D" parent="cuchillo2" groups=["enemigo"]]
+position = Vector2( 0, -80 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo2/Node2D12"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo2/Node2D12"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo2/Node2D12/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo3" type="RigidBody2D" parent="."]
+position = Vector2( 536, 144 )
+rotation = 3.14159
+
+[node name="Node2D" type="Node2D" parent="cuchillo3" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo3/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo3/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo3/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo4" type="RigidBody2D" parent="."]
+position = Vector2( 536, 224 )
+rotation = 3.14159
+
+[node name="Node2D" type="Node2D" parent="cuchillo4" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo4/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo4/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo4/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo5" type="RigidBody2D" parent="."]
+position = Vector2( 536, 56 )
+rotation = 3.14159
+
+[node name="Node2D" type="Node2D" parent="cuchillo5" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo5/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo5/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo5/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo6" type="RigidBody2D" parent="."]
+position = Vector2( 152, 56 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo6" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo6/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo6/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo6/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo7" type="RigidBody2D" parent="."]
+position = Vector2( 152, 232 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo7" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo7/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo7/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo7/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo8" type="RigidBody2D" parent="."]
+position = Vector2( 152, 144 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo8" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo8/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo8/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo8/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo9" type="RigidBody2D" parent="."]
+position = Vector2( 472, 336 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo9" groups=["enemigo"]]
+position = Vector2( 136, 16 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo9/Node2D"]
+position = Vector2( 5.00018, 0.000335693 )
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 7 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo9/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo9/Node2D/AreaCaja"]
+position = Vector2( -0.499969, 6.10352e-05 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 2 )
+
+[node name="cuchillo10" type="RigidBody2D" parent="."]
+position = Vector2( 216, 336 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo10" groups=["enemigo"]]
+position = Vector2( -144, 16 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo10/Node2D"]
+position = Vector2( 0, -3.05176e-05 )
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 7 )
+flip_v = true
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo10/Node2D"]
+position = Vector2( 8, 0 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo10/Node2D/AreaCaja"]
+position = Vector2( 1.90735e-06, 3.8147e-06 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 3 )
+
+[node name="cuchillo11" type="RigidBody2D" parent="."]
+position = Vector2( 40, 72 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo11" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo11/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo11/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo11/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D2" type="Node2D" parent="cuchillo11" groups=["enemigo"]]
+position = Vector2( -88, 0 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo11/Node2D2"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo11/Node2D2"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo11/Node2D2/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D3" type="Node2D" parent="cuchillo11" groups=["enemigo"]]
+position = Vector2( -168, 0 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo11/Node2D3"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo11/Node2D3"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo11/Node2D3/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D4" type="Node2D" parent="cuchillo11" groups=["enemigo"]]
+position = Vector2( -248, 0 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo11/Node2D4"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo11/Node2D4"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo11/Node2D4/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D5" type="Node2D" parent="cuchillo11" groups=["enemigo"]]
+position = Vector2( -328, 0 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo11/Node2D5"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo11/Node2D5"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo11/Node2D5/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo12" type="RigidBody2D" parent="."]
+position = Vector2( 40, 104 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo12" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo12/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo12/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo12/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo13" type="RigidBody2D" parent="."]
+position = Vector2( 40, 136 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo13" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo13/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo13/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo13/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo14" type="RigidBody2D" parent="."]
+position = Vector2( 40, 168 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo14" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo14/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo14/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo14/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo15" type="RigidBody2D" parent="."]
+position = Vector2( 40, 200 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo15" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo15/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo15/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo15/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo16" type="RigidBody2D" parent="."]
+position = Vector2( 40, 224 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo16" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo16/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo16/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo16/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo17" type="RigidBody2D" parent="."]
+position = Vector2( 640, 72 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo17" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo17/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo17/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo17/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D2" type="Node2D" parent="cuchillo17" groups=["enemigo"]]
+position = Vector2( -88, 0 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo17/Node2D2"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo17/Node2D2"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo17/Node2D2/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D3" type="Node2D" parent="cuchillo17" groups=["enemigo"]]
+position = Vector2( -168, 0 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo17/Node2D3"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo17/Node2D3"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo17/Node2D3/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D4" type="Node2D" parent="cuchillo17" groups=["enemigo"]]
+position = Vector2( -248, 0 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo17/Node2D4"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo17/Node2D4"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo17/Node2D4/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D5" type="Node2D" parent="cuchillo17" groups=["enemigo"]]
+position = Vector2( -320, 0 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo17/Node2D5"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo17/Node2D5"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo17/Node2D5/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo18" type="RigidBody2D" parent="."]
+position = Vector2( 640, 104 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo18" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo18/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo18/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo18/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo19" type="RigidBody2D" parent="."]
+position = Vector2( 640, 136 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo19" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo19/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo19/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo19/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo20" type="RigidBody2D" parent="."]
+position = Vector2( 640, 168 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo20" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo20/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo20/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo20/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo21" type="RigidBody2D" parent="."]
+position = Vector2( 640, 200 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo21" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo21/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo21/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo21/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo22" type="RigidBody2D" parent="."]
+position = Vector2( 640, 224 )
+
+[node name="Node2D" type="Node2D" parent="cuchillo22" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo22/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo22/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo22/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo23" type="RigidBody2D" parent="."]
+position = Vector2( 352, -152 )
+rotation = 1.5708
+
+[node name="Node2D" type="Node2D" parent="cuchillo23" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo23/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo23/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo23/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D2" type="Node2D" parent="cuchillo23" groups=["enemigo"]]
+position = Vector2( 0, 16 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo23/Node2D2"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo23/Node2D2"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo23/Node2D2/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D3" type="Node2D" parent="cuchillo23" groups=["enemigo"]]
+position = Vector2( 0, -16 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo23/Node2D3"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo23/Node2D3"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo23/Node2D3/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D4" type="Node2D" parent="cuchillo23" groups=["enemigo"]]
+position = Vector2( 0, -32 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo23/Node2D4"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo23/Node2D4"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo23/Node2D4/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D5" type="Node2D" parent="cuchillo23" groups=["enemigo"]]
+position = Vector2( 0, 32 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo23/Node2D5"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo23/Node2D5"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo23/Node2D5/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D6" type="Node2D" parent="cuchillo23" groups=["enemigo"]]
+position = Vector2( 0, 48 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo23/Node2D6"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo23/Node2D6"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo23/Node2D6/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D7" type="Node2D" parent="cuchillo23" groups=["enemigo"]]
+position = Vector2( 0, 64 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo23/Node2D7"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo23/Node2D7"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo23/Node2D7/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D8" type="Node2D" parent="cuchillo23" groups=["enemigo"]]
+position = Vector2( 0, -48 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo23/Node2D8"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo23/Node2D8"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo23/Node2D8/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D9" type="Node2D" parent="cuchillo23" groups=["enemigo"]]
+position = Vector2( 0, -64 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo23/Node2D9"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo23/Node2D9"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo23/Node2D9/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D10" type="Node2D" parent="cuchillo23" groups=["enemigo"]]
+position = Vector2( 0, 80 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo23/Node2D10"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo23/Node2D10"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo23/Node2D10/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D11" type="Node2D" parent="cuchillo23" groups=["enemigo"]]
+position = Vector2( 0, 96 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo23/Node2D11"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo23/Node2D11"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo23/Node2D11/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D12" type="Node2D" parent="cuchillo23" groups=["enemigo"]]
+position = Vector2( 0, -80 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo23/Node2D12"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo23/Node2D12"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo23/Node2D12/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="cuchillo24" type="RigidBody2D" parent="."]
+position = Vector2( 336, 472 )
+rotation = -1.5708
+
+[node name="Node2D" type="Node2D" parent="cuchillo24" groups=["enemigo"]]
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo24/Node2D"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo24/Node2D"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo24/Node2D/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D2" type="Node2D" parent="cuchillo24" groups=["enemigo"]]
+position = Vector2( 0, 16 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo24/Node2D2"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo24/Node2D2"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo24/Node2D2/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D3" type="Node2D" parent="cuchillo24" groups=["enemigo"]]
+position = Vector2( 0, -16 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo24/Node2D3"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo24/Node2D3"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo24/Node2D3/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D4" type="Node2D" parent="cuchillo24" groups=["enemigo"]]
+position = Vector2( 0, -32 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo24/Node2D4"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo24/Node2D4"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo24/Node2D4/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D5" type="Node2D" parent="cuchillo24" groups=["enemigo"]]
+position = Vector2( 0, 32 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo24/Node2D5"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo24/Node2D5"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo24/Node2D5/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D6" type="Node2D" parent="cuchillo24" groups=["enemigo"]]
+position = Vector2( 0, 48 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo24/Node2D6"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo24/Node2D6"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo24/Node2D6/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D7" type="Node2D" parent="cuchillo24" groups=["enemigo"]]
+position = Vector2( 0, 64 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo24/Node2D7"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo24/Node2D7"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo24/Node2D7/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D8" type="Node2D" parent="cuchillo24" groups=["enemigo"]]
+position = Vector2( 0, -48 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo24/Node2D8"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo24/Node2D8"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo24/Node2D8/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D9" type="Node2D" parent="cuchillo24" groups=["enemigo"]]
+position = Vector2( 0, -64 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo24/Node2D9"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo24/Node2D9"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo24/Node2D9/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D10" type="Node2D" parent="cuchillo24" groups=["enemigo"]]
+position = Vector2( 0, 80 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo24/Node2D10"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo24/Node2D10"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo24/Node2D10/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D11" type="Node2D" parent="cuchillo24" groups=["enemigo"]]
+position = Vector2( 0, 96 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo24/Node2D11"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo24/Node2D11"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo24/Node2D11/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Node2D12" type="Node2D" parent="cuchillo24" groups=["enemigo"]]
+position = Vector2( 0, -80 )
+script = ExtResource( 1 )
+
+[node name="caja" type="Sprite" parent="cuchillo24/Node2D12"]
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="AreaCaja" type="Area2D" parent="cuchillo24/Node2D12"]
+position = Vector2( 0, -7.62939e-06 )
+scale = Vector2( 6, 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuchillo24/Node2D12/AreaCaja"]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Controles" type="CanvasLayer" parent="."]
+scale = Vector2( 3, 3 )
+transform = Transform2D( 3, 0, 0, 3, 0, 0 )
+
+[node name="Piso" type="TileMap" parent="Controles"]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 117.333, 53.3333 )
+scale = Vector2( 0.133, 0.133 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -589834, -1073741684, 0, -589833, -1073741684, 0, -589832, -1073741684, 0, -589831, -1073741684, 0, -589830, -1073741684, 0, -589829, -1073741684, 0, -589828, -1073741684, 0, -589827, -1073741684, 0, -589826, -1073741684, 0, -589825, -1073741684, 0, -655360, -1073741684, 0, -655359, -1073741684, 0, -655358, -1073741684, 0, -655357, -1073741684, 0, -655356, -1073741684, 0, -655355, -1073741684, 0, -655354, -1073741684, 0, -655353, -1073741684, 0, -655352, -1073741684, 0, -655351, -1073741684, 0, -524298, -1073741684, 0, -524297, -1073741684, 0, -524296, -1073741684, 0, -524295, -1073741684, 0, -524294, -1073741684, 0, -524293, -1073741684, 0, -524292, -1073741684, 0, -524291, -1073741684, 0, -524290, -1073741684, 0, -524289, -1073741684, 0, -589824, -1073741684, 0, -589823, -1073741684, 0, -589822, -1073741684, 0, -589821, -1073741684, 0, -589820, -1073741684, 0, -589819, -1073741684, 0, -589818, -1073741684, 0, -589817, -1073741684, 0, -589816, -1073741684, 0, -589815, -1073741684, 0, -458762, -1073741684, 0, -458761, -1073741684, 0, -458760, -1073741684, 0, -458759, -1073741684, 0, -458758, -1073741684, 0, -458757, -1073741684, 0, -458756, -1073741684, 0, -458755, -1073741684, 0, -458754, -1073741684, 0, -458753, -1073741684, 0, -524288, -1073741684, 0, -524287, -1073741684, 0, -524286, -1073741684, 0, -524285, -1073741684, 0, -524284, -1073741684, 0, -524283, -1073741684, 0, -524282, -1073741684, 0, -524281, -1073741684, 0, -524280, -1073741684, 0, -524279, -1073741684, 0, -393226, -1073741684, 0, -393225, -1073741684, 0, -393224, -1073741684, 0, -393223, -1073741684, 0, -393222, -1073741684, 0, -393221, -1073741684, 0, -393220, -1073741684, 0, -393219, -1073741684, 0, -393218, -1073741684, 0, -393217, -1073741684, 0, -458752, -1073741684, 0, -458751, -1073741684, 0, -458750, -1073741684, 0, -458749, -1073741684, 0, -458748, -1073741684, 0, -458747, -1073741684, 0, -458746, -1073741684, 0, -458745, -1073741684, 0, -458744, -1073741684, 0, -458743, -1073741684, 0, -327705, 281, 0, -327690, -1073741684, 0, -327689, -1073741684, 0, -327688, -1073741684, 0, -327687, -1073741684, 0, -327686, -1073741684, 0, -327685, -1073741684, 0, -327684, -1073741684, 0, -327683, -1073741684, 0, -327682, -1073741684, 0, -327681, -1073741684, 0, -393216, -1073741684, 0, -393215, -1073741684, 0, -393214, -1073741684, 0, -393213, -1073741684, 0, -393212, -1073741684, 0, -393211, -1073741684, 0, -393210, -1073741684, 0, -393209, -1073741684, 0, -393208, -1073741684, 0, -393207, -1073741684, 0, -262154, -1073741684, 0, -262153, -1073741684, 0, -262152, -1073741684, 0, -262151, -1073741684, 0, -262150, -1073741684, 0, -262149, -1073741684, 0, -262148, -1073741684, 0, -262147, -1073741684, 0, -262146, -1073741684, 0, -262145, -1073741684, 0, -327680, -1073741684, 0, -327679, -1073741684, 0, -327678, -1073741684, 0, -327677, -1073741684, 0, -327676, -1073741684, 0, -327675, -1073741684, 0, -327674, -1073741684, 0, -327673, -1073741684, 0, -327672, -1073741684, 0, -327671, -1073741684, 0, -196618, -1073741684, 0, -196617, -1073741684, 0, -196616, -1073741684, 0, -196615, -1073741684, 0, -196614, -1073741684, 0, -196613, -1073741684, 0, -196612, -1073741684, 0, -196611, -1073741684, 0, -196610, -1073741684, 0, -196609, -1073741684, 0, -262144, -1073741684, 0, -262143, -1073741684, 0, -262142, -1073741684, 0, -262141, -1073741684, 0, -262140, -1073741684, 0, -262139, -1073741684, 0, -262138, -1073741684, 0, -262137, -1073741684, 0, -262136, -1073741684, 0, -262135, -1073741684, 0, -131082, -1073741684, 0, -131081, -1073741684, 0, -131080, -1073741684, 0, -131079, -1073741684, 0, -131078, -1073741684, 0, -131077, -1073741684, 0, -131076, -1073741684, 0, -131075, -1073741684, 0, -131074, -1073741684, 0, -131073, -1073741684, 0, -196608, -1073741684, 0, -196607, -1073741684, 0, -196606, -1073741684, 0, -196605, -1073741684, 0, -196604, -1073741684, 0, -196603, -1073741684, 0, -196602, -1073741684, 0, -196601, -1073741684, 0, -196600, -1073741684, 0, -196599, -1073741684, 0, -65546, -1073741684, 0, -65545, -1073741684, 0, -65544, -1073741684, 0, -65543, -1073741684, 0, -65542, -1073741684, 0, -65541, -1073741684, 0, -65540, -1073741684, 0, -65539, -1073741684, 0, -65538, -1073741684, 0, -65537, -1073741684, 0, -131072, -1073741684, 0, -131071, -1073741684, 0, -131070, -1073741684, 0, -131069, -1073741684, 0, -131068, -1073741684, 0, -131067, -1073741684, 0, -131066, -1073741684, 0, -131065, -1073741684, 0, -131064, -1073741684, 0, -131063, -1073741684, 0, -10, -1073741684, 0, -9, -1073741684, 0, -8, -1073741684, 0, -7, -1073741684, 0, -6, -1073741684, 0, -5, -1073741684, 0, -4, -1073741684, 0, -3, -1073741684, 0, -2, -1073741684, 0, -1, -1073741684, 0, -65536, -1073741684, 0, -65535, -1073741684, 0, -65534, -1073741684, 0, -65533, -1073741684, 0, -65532, -1073741684, 0, -65531, -1073741684, 0, -65530, -1073741684, 0, -65529, -1073741684, 0, -65528, -1073741684, 0, -65527, -1073741684, 0, 65526, -1073741684, 0, 65527, -1073741684, 0, 65528, -1073741684, 0, 65529, -1073741684, 0, 65530, -1073741684, 0, 65531, -1073741684, 0, 65532, -1073741684, 0, 65533, -1073741684, 0, 65534, -1073741684, 0, 65535, -1073741684, 0, 0, -1073741684, 0, 1, -1073741684, 0, 2, -1073741684, 0, 3, -1073741684, 0, 4, -1073741684, 0, 5, -1073741684, 0, 6, -1073741684, 0, 7, -1073741684, 0, 8, -1073741684, 0, 9, -1073741684, 0, 131062, -1073741684, 0, 131063, -1073741684, 0, 131064, -1073741684, 0, 131065, -1073741684, 0, 131066, -1073741684, 0, 131067, -1073741684, 0, 131068, -1073741684, 0, 131069, -1073741684, 0, 131070, -1073741684, 0, 131071, -1073741684, 0, 65536, -1073741684, 0, 65537, -1073741684, 0, 65538, -1073741684, 0, 65539, -1073741684, 0, 65540, -1073741684, 0, 65541, -1073741684, 0, 65542, -1073741684, 0, 65543, -1073741684, 0, 65544, -1073741684, 0, 65545, -1073741684, 0, 196598, -1073741684, 0, 196599, -1073741684, 0, 196600, -1073741684, 0, 196601, -1073741684, 0, 196602, -1073741684, 0, 196603, -1073741684, 0, 196604, -1073741684, 0, 196605, -1073741684, 0, 196606, -1073741684, 0, 196607, -1073741684, 0, 131072, -1073741684, 0, 131073, -1073741684, 0, 131074, -1073741684, 0, 131075, -1073741684, 0, 131076, -1073741684, 0, 131077, -1073741684, 0, 131078, -1073741684, 0, 131079, -1073741684, 0, 131080, -1073741684, 0, 131081, -1073741684, 0, 262134, -1073741684, 0, 262135, -1073741684, 0, 262136, -1073741684, 0, 262137, -1073741684, 0, 262138, -1073741684, 0, 262139, -1073741684, 0, 262140, -1073741684, 0, 262141, -1073741684, 0, 262142, -1073741684, 0, 262143, -1073741684, 0, 196608, -1073741684, 0, 196609, -1073741684, 0, 196610, -1073741684, 0, 196611, -1073741684, 0, 196612, -1073741684, 0, 196613, -1073741684, 0, 196614, -1073741684, 0, 196615, -1073741684, 0, 196616, -1073741684, 0, 196617, -1073741684, 0, 327670, -1073741684, 0, 327671, -1073741684, 0, 327672, -1073741684, 0, 327673, -1073741684, 0, 327674, -1073741684, 0, 327675, -1073741684, 0, 327676, -1073741684, 0, 327677, -1073741684, 0, 327678, -1073741684, 0, 327679, -1073741684, 0, 262144, -1073741684, 0, 262145, -1073741684, 0, 262146, -1073741684, 0, 262147, -1073741684, 0, 262148, -1073741684, 0, 262149, -1073741684, 0, 262150, -1073741684, 0, 262151, -1073741684, 0, 262152, -1073741684, 0, 262153, -1073741684, 0, 393206, -1073741684, 0, 393207, -1073741684, 0, 393208, -1073741684, 0, 393209, -1073741684, 0, 393210, -1073741684, 0, 393211, -1073741684, 0, 393212, -1073741684, 0, 393213, -1073741684, 0, 393214, -1073741684, 0, 393215, -1073741684, 0, 327680, -1073741684, 0, 327681, -1073741684, 0, 327682, -1073741684, 0, 327683, -1073741684, 0, 327684, -1073741684, 0, 327685, -1073741684, 0, 327686, -1073741684, 0, 327687, -1073741684, 0, 327688, -1073741684, 0, 327689, -1073741684, 0, 458742, -1073741684, 0, 458743, -1073741684, 0, 458744, -1073741684, 0, 458745, -1073741684, 0, 458746, -1073741684, 0, 458747, -1073741684, 0, 458748, -1073741684, 0, 458749, -1073741684, 0, 458750, -1073741684, 0, 458751, -1073741684, 0, 393216, -1073741684, 0, 393217, -1073741684, 0, 393218, -1073741684, 0, 393219, -1073741684, 0, 393220, -1073741684, 0, 393221, -1073741684, 0, 393222, -1073741684, 0, 393223, -1073741684, 0, 393224, -1073741684, 0, 393225, -1073741684, 0, 524278, -1073741684, 0, 524279, -1073741684, 0, 524280, -1073741684, 0, 524281, -1073741684, 0, 524282, -1073741684, 0, 524283, -1073741684, 0, 524284, -1073741684, 0, 524285, -1073741684, 0, 524286, -1073741684, 0, 524287, -1073741684, 0, 458752, -1073741684, 0, 458753, -1073741684, 0, 458754, -1073741684, 0, 458755, -1073741684, 0, 458756, -1073741684, 0, 458757, -1073741684, 0, 458758, -1073741684, 0, 458759, -1073741684, 0, 458760, -1073741684, 0, 458761, -1073741684, 0, 589814, -1073741684, 0, 589815, -1073741684, 0, 589816, -1073741684, 0, 589817, -1073741684, 0, 589818, -1073741684, 0, 589819, -1073741684, 0, 589820, -1073741684, 0, 589821, -1073741684, 0, 589822, -1073741684, 0, 589823, -1073741684, 0, 524288, -1073741684, 0, 524289, -1073741684, 0, 524290, -1073741684, 0, 524291, -1073741684, 0, 524292, -1073741684, 0, 524293, -1073741684, 0, 524294, -1073741684, 0, 524295, -1073741684, 0, 524296, -1073741684, 0, 524297, -1073741684, 0, 655350, -1073741684, 0, 655351, -1073741684, 0, 655352, -1073741684, 0, 655353, -1073741684, 0, 655354, -1073741684, 0, 655355, -1073741684, 0, 655356, -1073741684, 0, 655357, -1073741684, 0, 655358, -1073741684, 0, 655359, -1073741684, 0, 589824, -1073741684, 0, 589825, -1073741684, 0, 589826, -1073741684, 0, 589827, -1073741684, 0, 589828, -1073741684, 0, 589829, -1073741684, 0, 589830, -1073741684, 0, 589831, -1073741684, 0, 589832, -1073741684, 0, 589833, -1073741684, 0 )
+
+[node name="accion" type="TouchScreenButton" parent="Controles"]
+position = Vector2( 104, 74.6667 )
+scale = Vector2( 0.9, 0.9 )
+normal = ExtResource( 6 )
+pressed = ExtResource( 5 )
+shape_centered = false
+action = "tecla_X"
+
+[node name="TimerRotacion" type="Timer" parent="."]

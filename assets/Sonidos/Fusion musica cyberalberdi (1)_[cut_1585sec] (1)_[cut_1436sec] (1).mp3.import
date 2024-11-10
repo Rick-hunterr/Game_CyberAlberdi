@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Fusion musica cyberalberdi (1)_[cut_1585sec] (1)_[cut_1436sec] (1).mp3-5e61c229d8640adb33024d154fe3217a.mp3str"
+
+[deps]
+
+source_file="res://assets/Sonidos/Fusion musica cyberalberdi (1)_[cut_1585sec] (1)_[cut_1436sec] (1).mp3"
+dest_files=[ "res://.import/Fusion musica cyberalberdi (1)_[cut_1585sec] (1)_[cut_1436sec] (1).mp3-5e61c229d8640adb33024d154fe3217a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
